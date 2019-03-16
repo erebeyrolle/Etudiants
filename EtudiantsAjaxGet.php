@@ -6,10 +6,10 @@
      <title>Etudiants avec AJAX</title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-     <script src="scripts/AjaxPost.js"></script>
+     <script src="scripts/AjaxGet.js"></script>
 </head>
 <body>
-     <form action="controllers/script_etudiants_apost.php" method="post">
+     <form action="controllers/scripts_etudiants_aget.php" method="get">
           <table>
                <tr>
                     <td><br/></td>

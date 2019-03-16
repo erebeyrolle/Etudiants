@@ -6,7 +6,7 @@
     <title>Etudiants</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="requestAjax.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
 <form action="etudiants.php" method="get">
@@ -14,16 +14,16 @@
 <tr>
 <td><br/></td>
 </tr>
-     <tr>
-          <td><label for="prenom">PRENOM</label> : </td>
+    <tr>
+        <td><label for="prenom">PRENOM</label> : </td>
 
-            <td><input type="text" name="prenom" id="prenom" /></td>
-       </tr>
+        <td><input type="text" name="prenom" id="prenom" /></td>
+        </tr>
 <td><br/></td>
 </tr>
 <tr>
-           <td></td>
-           <td ><input type="submit" value="Valider" class="Valider" /></td>
+        <td></td>
+        <td ><input type="submit" value="Valider" class="Valider" /></td>
 </tr>
 </table>
 </form>
@@ -35,9 +35,9 @@ if(isset($_GET['prenom'])){
     $prenom = $_GET['prenom'];
 }
 function getOneStudent($prenom) {
-    $connec = new PDO('mysql:host=localhost; dbname=ajax','root','0000');
+    $connec = new PDO('mysql:host=localhost; dbname=Etudiants','root','0000');
     $connec->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $request = $connec->prepare("SELECT * FROM etudiants WHERE prenom
+    $request = $connec->prepare("SELECT * FROM Students WHERE prenom
                                             LIKE '%$prenom%';");
 
 

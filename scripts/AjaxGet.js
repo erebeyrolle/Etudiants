@@ -12,6 +12,6 @@ function keyPressed() {
     }
 
     var value = document.getElementById("prenom").value;
-    xhr.open('GET', 'script_etudiants.php?prenom=' + value);
+    xhr.open('GET', 'controllers/script_etudiants_aget.php?prenom=' + value);
     xhr.send();
 }
